@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets" template="template.xhtml">
+
+
+    <ui:define name="content">
+        <f:metadata>
+            <f:viewParam name="pid" value="#{productDetailsBean.pid}"/>
+            <f:event type="javax.faces.event.PreRenderComponentEvent" listener="#{productDetailsBean.loadProduct}"/>
+
+        </f:metadata>
+
+        <h:form>
+            <h1>#{productDetailsBean.product.name}</h1>
+
+            <h:graphicImage library="images" name="#{productDetailsBean.product.id}.jpg"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
