@@ -1,5 +1,6 @@
 This is the code written during the Java EE JFokus talk by Paul Bakker and Bert Ertman.
 You will need to setup a few things in your application server to run the example:
+
  * A data source named "ducttape"
  * A JMS ConnectionFactory named "jms/ConnectionFactory"
  * A JMS Topic named "topic/orders"
